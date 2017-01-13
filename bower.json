@@ -1,0 +1,21 @@
+{
+  "name": "Telegram theme maker",
+  "description": "Tool to interactively create telegram themes",
+  "main": "index.js",
+  "authors": [
+    "Sebastiaan van Arkens <sebastiaan@vanarkens.nl>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/thirdparty",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
