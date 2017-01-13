@@ -1,6 +1,6 @@
 section#telegram-wrapper {
   margin-top: 20px;
-  height: 600px;
+  height: 612px;
 
   #title-bar {
     background: $telegram-color-light-grey;
@@ -69,7 +69,7 @@ section#telegram-wrapper {
       background: $white;
     }
     &.left-column {
-      background: red;
+      background: $white;
       height: 100%;
       .toolbar {
         border-right: 1px solid $telegram-color-semi-light-grey;
@@ -110,10 +110,40 @@ section#telegram-wrapper {
           }
         }
       }
+      .active-chats {
+        ul {
+          li {
+            height: 62px;
+            width: 100%;
+            display: block;
+            padding: 8px 10px;
+            &:hover {
+              background: $telegram-color-light-grey-hover;
+            }
+            &.active {
+              background: $telegram-color-blue;
+            }
+            .profile-image {
+              height: 46px;
+              width: 46px;
+              border-radius: 50%;
+              display: inline-block;
+              background: red;
+              overflow: hidden;
+              float: left;
+              img {
+                background: $brand-purple;
+              }
+            }
+            .message-data {
+              float: left;
+            }
+          }
+        }
+      }
     }
 
     &.right-column {
-      background: blue;
       height: 100%;
     }
   }
