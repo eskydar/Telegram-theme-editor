@@ -60,7 +60,13 @@ html, body {
   width: 100%;
   height: 100%;
   background: #292929;
+  font-family: 'Open Sans', sans-serif;
 }
 
 @import 'components/header';
-@import 'components/telegram';
+//Telegram import
+@import 'components/telegram/telegram';
+@import 'components/telegram/title-bar';
+@import 'components/telegram/columns';
+@import 'components/telegram/toolbar';
+@import 'components/telegram/active-chat';

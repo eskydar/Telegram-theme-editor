@@ -1,0 +1,135 @@
+.active-chats {
+  ul {
+    li {
+      height: 62px;
+      width: 100%;
+      display: block;
+      padding: 8px 10px;
+      &:hover {
+        background: $telegram-color-light-grey;
+      }
+      &.active {
+        background: $telegram-color-blue;
+        .message-data {
+          float: left;
+          padding-top: 5px;
+          padding-left: 12px;
+          position: relative;
+          width: calc(100% - 46px);
+          h4 {
+            font-weight: 600;
+            font-size: 13px;
+            margin-bottom: 10px;
+            color: $white;
+          }
+          p {
+            font-size: 13px;
+            color: $white;
+            &.message-sticker {
+              color: $white;
+            }
+          }
+          .properties {
+            position: absolute;
+            right: 0;
+            top: 0;
+            .time {
+              font-size: 13px;
+              color: $white;
+              display: block;
+            }
+            .pin {
+              display: block;
+              width: 100%;
+              text-align: right;
+              padding-top: 15px;
+              svg {
+                fill: $white;
+              }
+            }
+          }
+        }
+      }
+      .profile-image {
+        height: 46px;
+        width: 46px;
+        border-radius: 50%;
+        display: inline-block;
+        background: red;
+        overflow: hidden;
+        float: left;
+        img {
+          background: $brand-purple;
+        }
+      }
+      .message-data {
+        float: left;
+        padding-top: 5px;
+        padding-left: 12px;
+        position: relative;
+        width: calc(100% - 46px);
+        h4 {
+          font-weight: 600;
+          font-size: 13px;
+          margin-bottom: 10px;
+        }
+        p {
+          font-size: 13px;
+          color: $telegram-color-medium-grey;
+          &.message-sticker {
+            color: $telegram-color-blue;
+          }
+        }
+        .properties {
+          position: absolute;
+          right: 0;
+          top: 0;
+          .time {
+            font-size: 13px;
+            color: $telegram-color-medium-grey;
+          }
+          .pin {
+            display: block;
+            width: 100%;
+            text-align: right;
+            padding-top: 15px;
+            svg {
+              fill: $telegram-color-medium-grey;
+            }
+          }
+          .unread {
+            position: relative;
+            width: 100%;
+            display: block;
+            padding-top: 8px;
+            .counter-wrapper {
+              position: absolute;
+              width: 20px;
+              height: 20px;
+              display: block;
+              right: 0;
+              .counter-bg {
+                width: 20px;
+                height: 20px;
+                display: block;
+                background: $telegram-color-blue;
+                @include border-radius(50%);
+                position: absolute;
+                &.inactive {
+                  background: $telegram-color-medium-grey;
+                }
+              }
+              .counter-text {
+                position: absolute;
+                left: 7px;
+                top: 5px;
+                font-size: 12px;
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

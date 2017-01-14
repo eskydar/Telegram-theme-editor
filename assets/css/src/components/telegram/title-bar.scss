@@ -1,0 +1,51 @@
+#title-bar {
+  background: $telegram-color-light-grey;
+  height: 21px;
+  ul {
+    float: right;
+    list-style: none;
+    height: 100%;
+    li {
+      width: 25px;
+      text-align: center;
+      height: 100%;
+      padding-top: 2px;
+      float: left;
+      &.minimize-button {
+        svg {
+          stroke: $telegram-color-medium-grey;
+        }
+      }
+      &.maximize-button {
+        svg {
+          stroke: $telegram-color-medium-grey;
+        }
+      }
+      &.close-button {
+        svg {
+          fill: $telegram-color-medium-grey;
+        }
+      }
+      &:hover {
+        &.minimize-button {
+          background: $telegram-color-light-grey-hover;
+          svg {
+            stroke: $telegram-color-medium-grey-hover;
+          }
+        }
+        &.maximize-button {
+          background: $telegram-color-light-grey-hover;
+          svg {
+            stroke: $telegram-color-medium-grey-hover;
+          }
+        }
+        &.close-button {
+          background: $telegram-color-red;
+          svg {
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+}

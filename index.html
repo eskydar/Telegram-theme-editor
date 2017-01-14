@@ -5,6 +5,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="assets/thirdparty/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/thirdparty/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/base.min.css">
     <!--<script data-main="assets/js/main" src="assets/thirdparty/requirejs/require.js"></script>-->
 </head>
@@ -14,7 +15,7 @@
             <h1>Telegram theme editor</h1>
         </header>
         <div class="row">
-        	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        	<div class="col-md-12 col-lg-12 hidden-xs hidden-sm">
         		<section id="telegram-wrapper">
                     <!--Start titlebar-->
                     <div id="title-bar">
@@ -28,7 +29,7 @@
                             <li class="maximize-button">
                                 <?xml version="1.0" encoding="iso-8859-1"?>
                                 <svg version="1.1" height="9px" width="10px">
-                                    <rect height="9px" width="10px" />
+                                    <rect height="9px" width="10px" stroke-width="3" fill="none" />
                                 </svg>
                             </li>
                             <li class="close-button">
@@ -63,25 +64,73 @@
                                     <span class="profile-image">
                                         <img src="assets/img/src/man.png" alt="">
                                     </span>
-                                    <span class="message-data">
+                                    <div class="message-data">
                                         <h4>John doe</h4>
                                         <p>You: Hey John, come and party tonight?!</p>
-                                    </span>
+                                        <span class="properties">
+                                            <span class="time">11:00</span>
+                                            <span class="pin">
+                                                <?xml version="1.0" encoding="iso-8859-1"?>
+                                                <svg version="1.1" width="15" height="15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 125" fill="black" xml:space="preserve">
+                                                    <path d="M60.655,80.21l1.281-17.826L88.497,35.82l8.405-0.604c3.367-0.9,4.104-3.656,1.641-6.121L70.907,1.458  c-2.467-2.468-5.218-1.727-6.121,1.639l-0.603,8.409L37.622,38.063l-17.831,1.285c-4.284,1.145-5.224,4.65-2.085,7.79  c0,0,13.729,13.731,14.793,14.795L5.693,88.819L0,100l11.186-5.692l26.885-26.803c1.066,1.062,14.793,14.794,14.793,14.794  C56.001,85.438,59.506,84.494,60.655,80.21z"/>
+                                                </svg>
+                                            </span>
+                                        </span>
+                                    </div>
                                 </li>
                                 <li>
                                     <span class="profile-image">
                                         <img src="assets/img/src/man.png" alt="">
                                     </span>
+                                    <div class="message-data">
+                                        <h4>Ferry</h4>
+                                        <p>Mag niet</p>
+                                        <span class="properties">
+                                            <span class="time">11:00</span>
+                                            <span class="unread">
+                                                <span class="counter-wrapper">
+                                                    <span class="counter-bg"></span>
+                                                    <span class="counter-text">1</span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
                                 </li>
                                 <li>
                                     <span class="profile-image">
                                         <img src="assets/img/src/man.png" alt="">
                                     </span>
+                                    <div class="message-data">
+                                        <h4>Ferry</h4>
+                                        <p class="message-sticker">Sticker</p>
+                                        <span class="properties">
+                                            <span class="time">11:00</span>
+                                            <span class="unread">
+                                                <span class="counter-wrapper">
+                                                    <span class="counter-bg inactive"></span>
+                                                    <span class="counter-text">1</span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
                                 </li>
                                 <li>
                                     <span class="profile-image">
                                         <img src="assets/img/src/man.png" alt="">
                                     </span>
+                                    <div class="message-data">
+                                        <h4>Ferry</h4>
+                                        <p>Mag niet</p>
+                                        <span class="properties">
+                                            <span class="time">11:00</span>
+                                            <span class="unread">
+                                                <span class="counter-wrapper">
+                                                    <span class="counter-bg inactive"></span>
+                                                    <span class="counter-text">1</span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
                                 </li>
                                 <li>
                                     <span class="profile-image">
@@ -120,7 +169,10 @@
                     <!--End content columns-->
                 </section>
         	</div>
-        </div>
+            <div class="col-md-12 col-lg-12 hidden-md hidden-lg">
+                Your resolution isn't supported yet.
+            </div>
+            </div>
     </div>
 </body>
 </html>

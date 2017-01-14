@@ -1,0 +1,16 @@
+.column {
+  padding: 0;
+  height: 100%;
+  .toolbar {
+    height: 54px;
+    background: $white;
+  }
+  &.left-column {
+    background: $white;
+    height: 100%;
+  }
+
+  &.right-column {
+    height: 100%;
+  }
+}

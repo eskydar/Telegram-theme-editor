@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<svg version="1.1" width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" width="10" height="10" stroke="black" xmlns="http://www.w3.org/2000/svg">
  <line y2="9.285714" x2="11.006943" y1="9.285714" x1="0" stroke-width="2" fill="none"/>
 </svg>
