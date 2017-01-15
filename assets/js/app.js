@@ -1,15 +1,18 @@
 define([
     'jquery',
     'helpers/utils',
-    'models/Theme'
+    'models/Theme',
+    'workers/themer'
 ], function(
     $,
     U,
-    Theme
+    Theme,
+    themeWorker
 ) {
     function bootstrap() {
-        var theme = new Theme();
-        console.log(theme)
+        themeWorker.initialize();
+        window.themeWorker = themeWorker;
+        window.Theme = Theme;
     }
 
     return {
