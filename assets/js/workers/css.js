@@ -33,9 +33,10 @@ define([
 
     }
 
-    function createSelector ( element, pseudo ) {
+    function createSelector ( element, child, pseudo ) {
         var selector = '[data-themeConfig-connection="' + element + '"]';
         if ( pseudo ) selector += ':' + pseudo;
+        if ( child ) selector += ' ' + child;
         return selector;
     }
 

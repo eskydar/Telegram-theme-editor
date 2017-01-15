@@ -10,9 +10,14 @@ define([
     CSS
 ){
     function setupBasicTheme (){
-        Theme.setDeep( 'config.titleBg', {element: 'titleBar', type: 'backgroundColor', color: '', pseudo: ''} );
-        Theme.setDeep( 'config.titleButtonCloseBgOver', {element: 'titleBar', type: 'backgroundColor', color: '', pseudo: 'hover'} );
-        Theme.setDeep( 'config.titleButtonCloseFgOver', {element: 'titleBar', type: 'backgroundColor', color: '', pseudo: 'hover'} );
+        // Theme.setDeep( 'config.titleBg', {element: 'titleBar', type: 'backgroundColor', color: '', pseudo: ''} );
+        // Theme.setDeep( 'config.titleButtonCloseBgOver', {element: 'titleBar', type: 'backgroundColor', color: '', pseudo: 'hover'} );
+        // Theme.setDeep( 'config.titleButtonCloseFgOver', {element: 'titleCloseIcon', type: 'fill', color: '', pseudo: 'hover'} );
+        Theme.set('config', {
+            titleBg: {element: 'titleBar', type: 'backgroundColor', color: '', child: '', pseudo: ''},
+            titleButtonCloseBgOver: {element: 'titleBar', type: 'backgroundColor', color: '', child: '', pseudo: 'hover'},
+            titleButtonCloseFgOver: {element: 'titleCloseIcon', type: 'fill', color: '', child: 'svg', pseudo: 'hover'}
+        })
     }
 
     function initialize () {
@@ -32,7 +37,7 @@ define([
 
     function patchElementStyle ( themeProperty, color ) {
         var data = Theme.getDeep( 'config.'+themeProperty );
-        var selector = CSS.createSelector( data.element, data.pseudo );
+        var selector = CSS.createSelector( data.element, data.child, data.pseudo );
         var rule = CSS.createRuleString( data.type, color );
         CSS.addCSSRule(selector, rule)
     }
