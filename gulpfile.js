@@ -46,7 +46,8 @@ gulp.task('styles', function(){
 gulp.task('jshint', function() {
     return gulp.src('assets/js/**/*.js')
         .pipe(jshint())
-        .pipe(jshint.reporter('jshint-stylish'));
+        .pipe(jshint.reporter('jshint-stylish'))
+        .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('watch', ['browser-sync'], function(){
