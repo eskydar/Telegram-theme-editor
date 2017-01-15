@@ -47,7 +47,6 @@ define([
         getDeep: function ( propPath ) {
             var path    = propPath.split('.'),
                 l       = path.length,
-                lastKey = l-1,
                 obj     = this;
             for ( var i = 0; i < l; i++ ) {
                 var key = path[i];

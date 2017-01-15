@@ -18,6 +18,10 @@ define([
         return this._name;
     };
 
+    Theme.prototype.setName = function( name ) {
+        this._name = name;
+    };
+
     return new Theme();
 });
 
