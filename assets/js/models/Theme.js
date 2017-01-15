@@ -3,7 +3,7 @@ define([
 ], function(
     Model
 ){
-    function Theme(){
+    function Theme (){
 
         Model.call( this );
 
@@ -14,11 +14,11 @@ define([
 
     Theme.prototype = Object.create( Model.prototype );
 
-    Theme.prototype.getName = function(){
+    Theme.prototype.getName = function (){
         return this._name;
     };
 
-    Theme.prototype.setName = function( name ) {
+    Theme.prototype.setName = function ( name ) {
         this._name = name;
     };
 

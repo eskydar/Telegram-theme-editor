@@ -1,11 +1,13 @@
 define([
     'jquery',
     'helpers/utils',
-    "models/Theme"
+    'models/Theme',
+    'workers/css'
 ], function(
     $,
     U,
-    Theme
+    Theme,
+    CSS
 ){
     function setupBasicTheme (){
         Theme.setDeep( 'config.titleBg', {element: 'titleBar', type: 'backgroundColor', color: '', pseudo: ''} );
@@ -20,6 +22,7 @@ define([
             var prop = $(this).attr('data-theme-property');
             setNewColor(prop, $(this).val());
         });
+        CSS.createStyleSheet( true )
     }
 
     function setNewColor ( themeProperty, color ) {
@@ -29,23 +32,9 @@ define([
 
     function patchElementStyle ( themeProperty, color ) {
         var data = Theme.getDeep( 'config.'+themeProperty );
-        var element = $('[data-themeConfig-connection=' + data.element + ']');
-        // element.css( U.camelCaseToDashed( data.type ), color );
-
-        // Create the <style> tag
-        var style = document.createElement("style");
-
-        // Add a media (and/or media query) here if you'd like!
-        // style.setAttribute("media", "screen")
-        // style.setAttribute("media", "only screen and (max-width : 1024px)")
-
-        // WebKit hack :(
-        style.appendChild(document.createTextNode(""));
-
-        // Add the <style> element to the page
-        document.head.appendChild(style);
-        style.sheet.insertRule('[data-themeConfig-connection="' + data.element + '"]:hover { background: green !important; }', 0);
-        console.log(document.styleSheets)
+        var selector = CSS.createSelector( data.element, data.pseudo );
+        var rule = CSS.createRuleString( data.type, color );
+        CSS.addCSSRule(selector, rule)
     }
 
     return {
