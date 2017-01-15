@@ -12,7 +12,7 @@ define([
         return this;
     }
     Model.getInstanceCount = function(){
-        return( instanceCount );
+        return instanceCount;
     };
     Model.prototype = {
         getInstanceID: function(){
