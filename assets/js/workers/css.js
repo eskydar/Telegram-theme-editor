@@ -26,7 +26,6 @@ define([
         else {
             sheet.addRule(selector, rule, index);
         }
-        console.log(sheet)
     }
 
     function removeCSSRule ( selector, rules ) {
@@ -52,7 +51,7 @@ define([
         addCSSRule: addCSSRule,
         createSelector: createSelector,
         createRuleString: createRuleString
-    }
+    };
 
 });
 

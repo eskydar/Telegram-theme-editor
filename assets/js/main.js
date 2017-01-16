@@ -1,10 +1,16 @@
 require.config({
     paths: {
-        lodash: '../thirdparty/lodash/lodash',
+        underscore: '../thirdparty/underscore/underscore',
         jquery: '../thirdparty/jquery/dist/jquery.min',
-        domReady: '../thirdparty/domReady/domReady'
+        domReady: '../thirdparty/domReady/domReady',
+        colorpicker: '../thirdparty/bootstrap-colorpicker/dist/js/bootstrap-colorpicker'
     },
     shim: {
+        colorpicker: {
+            deps: ['jquery'],
+            exports: ['jQuery.fn.colorpicker']
+        },
+        app: ['colorpicker']
     }
 });
 

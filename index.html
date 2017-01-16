@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="assets/thirdparty/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/thirdparty/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
     <link rel="stylesheet" href="assets/thirdparty/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/base.min.css">
     <script data-main="assets/js/main" src="assets/thirdparty/requirejs/require.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <header>
             <h1>Telegram theme editor</h1>
         </header>
         <div class="row">
-        	<div class="col-md-12 col-lg-12 hidden-xs hidden-sm">
+        	<div class="col-md-9 col-lg-9 hidden-xs hidden-sm">
         		<section id="telegram-wrapper">
                     <!--Start titlebar-->
                     <div id="title-bar" data-themeConfig-connection="titleBar">
@@ -26,7 +27,7 @@
                                     <line y2="9.285714" x2="11.006943" y1="9.285714" x1="0" stroke-width="2" fill="none"/>
                                 </svg>
                             </li>
-                            <li class="maximize-button">
+                            <li class="maximize-button" data-themeConfig-connection="titleCloseIcon">
                                 <?xml version="1.0" encoding="iso-8859-1"?>
                                 <svg version="1.1" height="9px" width="10px">
                                     <rect height="9px" width="10px" stroke-width="3" fill="none" />
@@ -83,8 +84,8 @@
                                         <img src="assets/img/src/man.png" alt="">
                                     </span>
                                     <div class="message-data">
-                                        <h4>Ferry</h4>
-                                        <p>Mag niet</p>
+                                        <h4>John doe</h4>
+                                        <p>You: Hey John, come and party tonight?!</p>
                                         <span class="properties">
                                             <span class="time">11:00</span>
                                             <span class="unread">
@@ -101,8 +102,8 @@
                                         <img src="assets/img/src/man.png" alt="">
                                     </span>
                                     <div class="message-data">
-                                        <h4>Ferry</h4>
-                                        <p class="message-sticker">Sticker</p>
+                                        <h4>John doe</h4>
+                                        <p>You: Hey John, come and party tonight?!</p>
                                         <span class="properties">
                                             <span class="time">11:00</span>
                                             <span class="unread">
@@ -119,8 +120,8 @@
                                         <img src="assets/img/src/man.png" alt="">
                                     </span>
                                     <div class="message-data">
-                                        <h4>Ferry</h4>
-                                        <p>Mag niet</p>
+                                        <h4>John doe</h4>
+                                        <p>You: Hey John, come and party tonight?!</p>
                                         <span class="properties">
                                             <span class="time">11:00</span>
                                             <span class="unread">
@@ -169,11 +170,27 @@
                     <!--End content columns-->
                 </section>
         	</div>
+            <div class="col-md-3 col-lg-3 hidden-xs hidden-sm">
+                <section id="sidebar-wrapper"></section>
+            </div>
             <div class="col-md-12 col-lg-12 hidden-md hidden-lg">
                 Your resolution isn't supported yet.
             </div>
-            <label for="" style="color: white; margin-right: 5px;">Title bar</label><input style="margin-top: 50px;" type="text" data-color-swapper data-theme-property="titleBg">
+            <!--<label for="" style="color: white; margin-right: 5px;">Title bar</label><input style="margin-top: 50px;" type="text" data-color-swapper data-theme-property="titleBg">-->
         </div>
     </div>
+
+    <script id="sidebar-template" type="text/x-underscore-template" >
+        <% if ( inputs.length ) { %>
+            <% _.each(inputs, function(input) { %>
+                <label style="color:white;" for="input-<%= input.connection %>"><%= input.label %></label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i></i></span>
+                    <input type="text" class="form-control" id="input-<%= input.connection %>" data-color-swapper data-theme-property="<%= input.connection %>">
+                </div>
+            <% }) %>
+        <% } %>
+    </script>
+
 </body>
 </html>
