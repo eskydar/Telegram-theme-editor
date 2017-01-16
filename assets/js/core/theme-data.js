@@ -1,5 +1,5 @@
 define([
-    '../helpers/utils',
+    'helpers/utils',
     'underscore'
 ], function(
     U,
