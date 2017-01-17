@@ -21,6 +21,6 @@
     "requirejs": "^2.3.2",
     "domReady": "requirejs-domready#^2.0.1",
     "underscore": "^1.8.3",
-    "bootstrap-colorpicker": "^2.4.0"
+    "jquery-minicolors": "^2.2.4"
   }
 }

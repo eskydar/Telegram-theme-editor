@@ -38,7 +38,8 @@ define([
 
         return _.map(elementsModelKeys, function( elementModelKey ) {
             var label = Theme.getElementLabel(elementModelKey);
-            return {label: label, connection:elementModelKey};
+            var color = Theme.getElementColor(elementModelKey);
+            return {label: label, connection:elementModelKey, color: color };
         });
     }
 
@@ -47,12 +48,14 @@ define([
         var html = [];
             var tpl = _.template(templateEl);
             var htmlToInsert = $(tpl({inputs: data}));
-            htmlToInsert.colorpicker().on('changeColor', function(e) {
-                var input = $(this).find('input');
-                setNewColor(input.attr('data-theme-property'), input.val())
+            htmlToInsert.find('input').minicolors({
+                theme: 'bootstrap',
+                change: function ( value ) {
+                    var input = $(this);
+                    setNewColor(input.attr('data-theme-property'), input.val())
+                }
             });
             html.push(htmlToInsert);
-        // });
         $('#sidebar-wrapper').html(html);
     }
 

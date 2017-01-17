@@ -23,7 +23,11 @@ define([
         generateThemeConfig: function () {
             var theme = this.get('config');
             return _.mapObject(theme, function( val ) {
-                return val.color;
+                var color = val.color;
+                if ( val.inherit ) {
+                    color = theme[val.inherit].color;
+                }
+                return color;
             });
         },
         getElementHTMLData: function (elementId) {
@@ -34,10 +38,13 @@ define([
             });
             return keyArray;
         },
-
         getElementLabel: function ( key ) {
             var theme = this.get('config');
             return theme[key].label || key;
+        },
+        getElementColor: function ( key ) {
+            var theme = this.get('config');
+            return theme[key].color || '#000000';
         }
     });
 

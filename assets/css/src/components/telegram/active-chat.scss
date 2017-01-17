@@ -72,10 +72,31 @@
           font-weight: 600;
           font-size: 13px;
           margin-bottom: 10px;
+          position: relative;
+          &.group-chat {
+            padding-left: 22px;
+          }
+          svg {
+            position: absolute;
+            left: 0;
+            top: -2px;
+            fill: black;
+          }
         }
         p {
           font-size: 13px;
           color: $telegram-color-medium-grey;
+          white-space: nowrap;
+          overflow-x: hidden;
+          text-overflow: ellipsis;
+          max-width: 90%;
+          height: 20px;
+          display: inline-block;
+          vertical-align: middle;
+          img {
+            width: 20px;
+            vertical-align: middle;
+          }
           &.message-sticker {
             color: $telegram-color-blue;
           }

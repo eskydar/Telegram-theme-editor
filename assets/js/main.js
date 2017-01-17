@@ -3,13 +3,10 @@ require.config({
         underscore: '../thirdparty/underscore/underscore',
         jquery: '../thirdparty/jquery/dist/jquery.min',
         domReady: '../thirdparty/domReady/domReady',
-        colorpicker: '../thirdparty/bootstrap-colorpicker/dist/js/bootstrap-colorpicker'
+        colorpicker: '../thirdparty/jquery-minicolors/jquery.minicolors'
     },
     shim: {
-        colorpicker: {
-            deps: ['jquery'],
-            exports: ['jQuery.fn.colorpicker']
-        },
+        colorpicker: ['jquery'],
         app: ['colorpicker']
     }
 });

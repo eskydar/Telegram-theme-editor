@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="assets/thirdparty/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/thirdparty/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
+    <link rel="stylesheet" href="assets/thirdparty/jquery-minicolors/jquery.minicolors.css">
     <link rel="stylesheet" href="assets/thirdparty/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/base.min.css">
@@ -21,13 +21,13 @@
                     <!--Start titlebar-->
                     <div id="title-bar" data-themeConfig-connection="titleBar">
                         <ul>
-                            <li class="minimize-button">
+                            <li class="minimize-button" data-themeConfig-connection="titleButtonIcon">
                                 <?xml version="1.0" encoding="iso-8859-1"?>
                                 <svg version="1.1" width="10" height="10" xmlns="http://www.w3.org/2000/svg">
                                     <line y2="9.285714" x2="11.006943" y1="9.285714" x1="0" stroke-width="2" fill="none"/>
                                 </svg>
                             </li>
-                            <li class="maximize-button" data-themeConfig-connection="titleCloseIcon">
+                            <li class="maximize-button" data-themeConfig-connection="titleButtonIcon">
                                 <?xml version="1.0" encoding="iso-8859-1"?>
                                 <svg version="1.1" height="9px" width="10px">
                                     <rect height="9px" width="10px" stroke-width="3" fill="none" />
@@ -66,8 +66,8 @@
                                         <img src="assets/img/src/man.png" alt="">
                                     </span>
                                     <div class="message-data">
-                                        <h4>John doe</h4>
-                                        <p>You: Hey John, come and party tonight?!</p>
+                                        <h4>Eva Summer</h4>
+                                        <p>Reminds me of a Chinese proverb</p>
                                         <span class="properties">
                                             <span class="time">11:00</span>
                                             <span class="pin">
@@ -84,14 +84,14 @@
                                         <img src="assets/img/src/man.png" alt="">
                                     </span>
                                     <div class="message-data">
-                                        <h4>John doe</h4>
-                                        <p>You: Hey John, come and party tonight?!</p>
+                                        <h4>Alexandra Smith</h4>
+                                        <p>This is amazing!</p>
                                         <span class="properties">
-                                            <span class="time">11:00</span>
+                                            <span class="time">10:00</span>
                                             <span class="unread">
                                                 <span class="counter-wrapper">
                                                     <span class="counter-bg"></span>
-                                                    <span class="counter-text">1</span>
+                                                    <span class="counter-text">2</span>
                                                 </span>
                                             </span>
                                         </span>
@@ -102,14 +102,14 @@
                                         <img src="assets/img/src/man.png" alt="">
                                     </span>
                                     <div class="message-data">
-                                        <h4>John doe</h4>
-                                        <p>You: Hey John, come and party tonight?!</p>
+                                        <h4>Mike Apple</h4>
+                                        <p><img src="assets/img/src/smiley.png" alt=""> Sticker</p>
                                         <span class="properties">
-                                            <span class="time">11:00</span>
+                                            <span class="time">9:00</span>
                                             <span class="unread">
                                                 <span class="counter-wrapper">
                                                     <span class="counter-bg inactive"></span>
-                                                    <span class="counter-text">1</span>
+                                                    <span class="counter-text">2</span>
                                                 </span>
                                             </span>
                                         </span>
@@ -120,16 +120,16 @@
                                         <img src="assets/img/src/man.png" alt="">
                                     </span>
                                     <div class="message-data">
-                                        <h4>John doe</h4>
-                                        <p>You: Hey John, come and party tonight?!</p>
+                                        <h4 class="group-chat">
+                                            <?xml version="1.0" encoding="iso-8859-1"?>
+                                            <svg version="1.1" width="20" height="20" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 512 640" xml:space="preserve">
+                                                <path d="M337.454,232c33.599,0,61.092-27.002,61.092-60c0-32.997-27.493-60-61.092-60s-61.09,27.003-61.09,60  C276.364,204.998,303.855,232,337.454,232z M174.546,232c33.599,0,61.09-27.002,61.09-60c0-32.997-27.491-60-61.09-60  s-61.092,27.003-61.092,60C113.454,204.998,140.947,232,174.546,232z M174.546,276C126.688,276,32,298.998,32,346v54h288v-54  C320,298.998,222.401,276,174.546,276z M337.454,287.003c-6.105,0-10.325,0-17.454,0.997c23.426,17.002,32,28,32,58v54h128v-54  C480,298.998,385.312,287.003,337.454,287.003z"/>
+                                            </svg>
+                                            Evening Club
+                                        </h4>
+                                        <p>Eva: Photo</p>
                                         <span class="properties">
-                                            <span class="time">11:00</span>
-                                            <span class="unread">
-                                                <span class="counter-wrapper">
-                                                    <span class="counter-bg inactive"></span>
-                                                    <span class="counter-text">1</span>
-                                                </span>
-                                            </span>
+                                            <span class="time">8:00</span>
                                         </span>
                                     </div>
                                 </li>
@@ -137,26 +137,55 @@
                                     <span class="profile-image">
                                         <img src="assets/img/src/man.png" alt="">
                                     </span>
+                                    <div class="message-data">
+                                        <h4 class="group-chat">
+                                            <?xml version="1.0" encoding="iso-8859-1"?>
+                                            <svg version="1.1" width="20" height="20" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 512 640" xml:space="preserve">
+                                                <path d="M337.454,232c33.599,0,61.092-27.002,61.092-60c0-32.997-27.493-60-61.092-60s-61.09,27.003-61.09,60  C276.364,204.998,303.855,232,337.454,232z M174.546,232c33.599,0,61.09-27.002,61.09-60c0-32.997-27.491-60-61.09-60  s-61.092,27.003-61.092,60C113.454,204.998,140.947,232,174.546,232z M174.546,276C126.688,276,32,298.998,32,346v54h288v-54  C320,298.998,222.401,276,174.546,276z M337.454,287.003c-6.105,0-10.325,0-17.454,0.997c23.426,17.002,32,28,32,58v54h128v-54  C480,298.998,385.312,287.003,337.454,287.003z"/>
+                                            </svg>
+                                            Old Pirates
+                                        </h4>
+                                        <p>Max: Yo-ho-ho!</p>
+                                        <span class="properties">
+                                            <span class="time">7:00</span>
+                                        </span>
+                                    </div>
                                 </li>
                                 <li>
                                     <span class="profile-image">
                                         <img src="assets/img/src/man.png" alt="">
                                     </span>
+                                    <div class="message-data">
+                                        <h4>Max Bright</h4>
+                                        <p>How about some coffee?</p>
+                                        <span class="properties">
+                                            <span class="time">6:00</span>
+                                        </span>
+                                    </div>
                                 </li>
                                 <li>
                                     <span class="profile-image">
                                         <img src="assets/img/src/man.png" alt="">
                                     </span>
+                                    <div class="message-data">
+                                        <h4>Natalie Parker</h4>
+                                        <p>OK, great)</p>
+                                        <span class="properties">
+                                            <span class="time">5:00</span>
+                                        </span>
+                                    </div>
                                 </li>
                                 <li>
                                     <span class="profile-image">
                                         <img src="assets/img/src/man.png" alt="">
                                     </span>
-                                </li>
-                                <li>
-                                    <span class="profile-image">
-                                        <img src="assets/img/src/man.png" alt="">
-                                    </span>
+                                    <div class="message-data">
+                                        <h4>Davy Jones</h4>
+                                        <p>Keynote.pdf</p>
+                                        <span class="properties">
+                                            <span class="time">4:00</span>
+                                        </span>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -183,14 +212,12 @@
     <script id="sidebar-template" type="text/x-underscore-template" >
         <% if ( inputs.length ) { %>
             <% _.each(inputs, function(input) { %>
-                <label style="color:white;" for="input-<%= input.connection %>"><%= input.label %></label>
-                <div class="input-group">
-                    <span class="input-group-addon"><i></i></span>
-                    <input type="text" class="form-control" id="input-<%= input.connection %>" data-color-swapper data-theme-property="<%= input.connection %>">
+                 <div class="form-group">
+                    <label style="color:white;" for="input-<%= input.connection %>"><%= input.label %></label>
+                    <input type="text" class="form-control" id="input-<%= input.connection %>" value="<%= input.color %>" data-color-swapper data-theme-property="<%= input.connection %>">
                 </div>
             <% }) %>
         <% } %>
     </script>
-
 </body>
 </html>
