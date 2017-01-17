@@ -93,6 +93,10 @@
           height: 20px;
           display: inline-block;
           vertical-align: middle;
+          .file, .sender, .sticker {
+            color: $telegram-color-blue;
+            font-weight: 600;
+          }
           img {
             width: 20px;
             vertical-align: middle;
@@ -108,6 +112,15 @@
           .time {
             font-size: 13px;
             color: $telegram-color-medium-grey;
+            display: block;
+            .chat-read {
+              display: inline-block;
+              float: left;
+              margin-right:5px;
+              svg {
+                fill: $telegram-color-green;
+              }
+            }
           }
           .pin {
             display: block;

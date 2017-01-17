@@ -6,7 +6,7 @@ define([
     _
 ) {
    return {
-       windowBg: {element: '', type: '', color: '', child: '', pseudo: ''},
+       windowBg: {element: 'mainBackground', type: 'backgroundColor', color: '#ffffff', child: '', pseudo: ''},
        windowFg: {element: '', type: '', color: '', child: '', pseudo: ''},
        windowBgOver: {element: '', type: '', color: '', child: '', pseudo: ''},
        windowBgRipple: {element: '', type: '', color: '', child: '', pseudo: ''},

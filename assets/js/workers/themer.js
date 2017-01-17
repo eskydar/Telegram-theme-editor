@@ -29,7 +29,7 @@ define([
         var elementsModelKeys = [];
         var target = 'data-themeConfig-connection';
         var attr = '[' + target + ']';
-        var elements = $('#telegram-wrapper').find(attr);
+        var elements = $('[data-theme-scope]').find(attr);
         elements.each(function(i, element) {
             var elAttribute = $(element).attr(target);
             elementsModelKeys = _.union(elementsModelKeys, Theme.getElementHTMLData(elAttribute));
@@ -45,18 +45,16 @@ define([
 
     function createHTML ( data ) {
         var templateEl = $('script#sidebar-template').html();
-        var html = [];
-            var tpl = _.template(templateEl);
-            var htmlToInsert = $(tpl({inputs: data}));
-            htmlToInsert.find('input').minicolors({
-                theme: 'bootstrap',
-                change: function ( value ) {
-                    var input = $(this);
-                    setNewColor(input.attr('data-theme-property'), input.val())
-                }
-            });
-            html.push(htmlToInsert);
-        $('#sidebar-wrapper').html(html);
+        var tpl = _.template(templateEl);
+        var htmlToInsert = $(tpl({inputs: data}));
+        $('#sidebar-wrapper').html(htmlToInsert);
+        htmlToInsert.find('input').minicolors({
+            theme: 'bootstrap',
+            change: function ( value ) {
+                var input = $(this);
+                setNewColor(input.attr('data-theme-property'), input.val())
+            }
+        });
     }
 
     function setNewColor ( themeProperty, color ) {

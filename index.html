@@ -16,8 +16,8 @@
             <h1>Telegram theme editor</h1>
         </header>
         <div class="row">
-        	<div class="col-md-9 col-lg-9 hidden-xs hidden-sm">
-        		<section id="telegram-wrapper">
+        	<div class="col-md-9 col-lg-9 hidden-xs hidden-sm" data-theme-scope>
+        		<section id="telegram-wrapper" data-themeConfig-connection="mainBackground">
                     <!--Start titlebar-->
                     <div id="title-bar" data-themeConfig-connection="titleBar">
                         <ul>
@@ -103,7 +103,10 @@
                                     </span>
                                     <div class="message-data">
                                         <h4>Mike Apple</h4>
-                                        <p><img src="assets/img/src/smiley.png" alt=""> Sticker</p>
+                                        <p>
+                                            <img src="assets/img/src/smiley.png" alt="">
+                                            <span class="sticker">Sticker</span>
+                                        </p>
                                         <span class="properties">
                                             <span class="time">9:00</span>
                                             <span class="unread">
@@ -127,7 +130,7 @@
                                             </svg>
                                             Evening Club
                                         </h4>
-                                        <p>Eva: Photo</p>
+                                        <p><span class="sender">Eva:</span> <span class="file">Photo</span></p>
                                         <span class="properties">
                                             <span class="time">8:00</span>
                                         </span>
@@ -145,7 +148,7 @@
                                             </svg>
                                             Old Pirates
                                         </h4>
-                                        <p>Max: Yo-ho-ho!</p>
+                                        <p><span class="sender">Max:</span> Yo-ho-ho!</p>
                                         <span class="properties">
                                             <span class="time">7:00</span>
                                         </span>
@@ -159,7 +162,16 @@
                                         <h4>Max Bright</h4>
                                         <p>How about some coffee?</p>
                                         <span class="properties">
-                                            <span class="time">6:00</span>
+                                            <span class="time">
+                                                <span class="chat-read">
+                                                    <?xml version="1.0" encoding="iso-8859-1"?>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 16" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                                                        <path stroke="null" id="svg_1" d="m6.822331,12.703237l-5.065186,-5.065688c-0.155528,-0.155026 -0.155528,-0.406881 0,-0.561907c0.155026,-0.155528 0.406881,-0.155528 0.561907,0l4.503781,4.504283l8.906219,-8.907724c0.155528,-0.155528 0.406881,-0.155528 0.561907,0c0.155528,0.155026 0.155528,0.406881 0,0.561907l-9.468627,9.469129z"/>
+                                                        <path stroke="null" id="svg_2" d="m24.187658,2.676599c-0.161391,-0.161391 -0.42222,-0.161391 -0.58309,0l-9.242504,9.243546l-1.778946,-1.778946l-0.58309,0.58309l2.362037,2.361516l9.825595,-9.826636c0.16087,-0.16035 0.16087,-0.421699 0,-0.58257z"/>
+                                                    </svg>
+                                                </span>
+                                                6:00
+                                            </span>
                                         </span>
                                     </div>
                                 </li>
@@ -171,7 +183,16 @@
                                         <h4>Natalie Parker</h4>
                                         <p>OK, great)</p>
                                         <span class="properties">
-                                            <span class="time">5:00</span>
+                                            <span class="time">
+                                                <span class="chat-read">
+                                                    <?xml version="1.0" encoding="iso-8859-1"?>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 16" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                                                        <path stroke="null" id="svg_1" d="m6.822331,12.703237l-5.065186,-5.065688c-0.155528,-0.155026 -0.155528,-0.406881 0,-0.561907c0.155026,-0.155528 0.406881,-0.155528 0.561907,0l4.503781,4.504283l8.906219,-8.907724c0.155528,-0.155528 0.406881,-0.155528 0.561907,0c0.155528,0.155026 0.155528,0.406881 0,0.561907l-9.468627,9.469129z"/>
+                                                        <path stroke="null" id="svg_2" d="m24.187658,2.676599c-0.161391,-0.161391 -0.42222,-0.161391 -0.58309,0l-9.242504,9.243546l-1.778946,-1.778946l-0.58309,0.58309l2.362037,2.361516l9.825595,-9.826636c0.16087,-0.16035 0.16087,-0.421699 0,-0.58257z"/>
+                                                    </svg>
+                                                </span>
+                                                5:00
+                                            </span>
                                         </span>
                                     </div>
                                 </li>
@@ -181,7 +202,9 @@
                                     </span>
                                     <div class="message-data">
                                         <h4>Davy Jones</h4>
-                                        <p>Keynote.pdf</p>
+                                        <p>
+                                            <span class="file">Keynote.pdf</span>
+                                        </p>
                                         <span class="properties">
                                             <span class="time">4:00</span>
                                         </span>
@@ -205,7 +228,6 @@
             <div class="col-md-12 col-lg-12 hidden-md hidden-lg">
                 Your resolution isn't supported yet.
             </div>
-            <!--<label for="" style="color: white; margin-right: 5px;">Title bar</label><input style="margin-top: 50px;" type="text" data-color-swapper data-theme-property="titleBg">-->
         </div>
     </div>
 
