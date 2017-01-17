@@ -1,11 +1,12 @@
 .toolbar {
-  border-right: 1px solid $telegram-color-semi-light-grey;
+  border-bottom: 1px solid $telegram-color-semi-light-grey;
+  &:last-child {
+    border-right: none;
+  }
   span {
     float: left;
     &.hamburger {
       width: 54px;
-      height: 100%;
-      display: inline-block;
       line-height: 54px;
       text-align: center;
       svg {
@@ -31,6 +32,50 @@
         font-size: 12px;
         @include placeholder{
           color: $telegram-color-medium-grey-hover;
+        }
+      }
+    }
+
+    &.chat-header {
+      width: calc(100% - 97px);
+      height: 100%;
+      padding: 10px 0 0 17px;
+      span {
+        display: block;
+        width: 100%;
+        &.participant-name {
+          font-weight: 600;
+          font-size: 14px;
+          margin-bottom: 8px;
+        }
+        &.participant-status {
+          font-size: 13px;
+          color: $telegram-color-blue;
+        }
+      }
+    }
+    &.chat-menu {
+      width: 97px;
+      height: 100%;
+      ul {
+        height: 100%;
+        li {
+          float: left;
+          width: 50%;
+          display: block;
+          height: 100%;
+          text-align: center;
+          padding-top: 18px;
+          &:hover {
+            svg {
+              fill: $telegram-color-medium-grey-hover;
+              stroke: $telegram-color-medium-grey-hover;
+            }
+          }
+          svg {
+            fill: $telegram-color-medium-grey;
+            stroke: $telegram-color-medium-grey;
+          }
         }
       }
     }

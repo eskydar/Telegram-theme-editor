@@ -63,6 +63,10 @@ html, body {
   font-family: 'Open Sans', sans-serif;
 }
 
+* {
+  @include user-select;
+}
+
 @import 'components/header';
 @import 'components/sidebar';
 //Telegram import
