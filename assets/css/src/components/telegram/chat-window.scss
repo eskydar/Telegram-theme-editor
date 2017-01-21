@@ -1,3 +1,71 @@
 .chat-window {
+  height: 100%;
+  width: 100%;
+  background: red;
+  display: block;
+}
 
+.chat-input-container {
+  height: 46px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid $telegram-color-semi-light-grey;
+
+  span.icon-container {
+    width: 44px;
+    height: 100%;
+    display: block;
+    float: left;
+    text-align: center;
+    padding-top: 10px;
+    &.attachment {
+      svg {
+        fill: $telegram-color-medium-grey;
+      }
+      &:hover {
+        svg {
+          fill: $telegram-color-medium-grey-hover;
+        }
+      }
+    }
+    &.emoji {
+      width: 50px;
+      padding-top: 13px;
+      svg {
+        fill: none;
+        stroke: $telegram-color-medium-grey;
+      }
+      &:hover {
+        svg {
+          fill: none;
+          stroke: $telegram-color-medium-grey-hover;
+        }
+      }
+    }
+    &.voice-message {
+      width: 50px;
+      padding-top: 13px;
+      svg {
+        fill: $telegram-color-medium-grey;
+      }
+      &:hover {
+        svg {
+          fill: $telegram-color-medium-grey-hover;
+        }
+      }
+    }
+  }
+  input {
+    height: 100%;
+    width: calc(100% - 144px);
+    float: left;
+    padding: 5px;
+    border: none;
+    font-size: 13px;
+    background: $white;
+    @include placeholder{
+      color: $telegram-color-medium-grey;
+    }
+  }
 }

@@ -64,7 +64,7 @@ html, body {
 }
 
 * {
-  @include user-select;
+  //@include user-select;
 }
 
 @import 'components/header';
@@ -75,3 +75,4 @@ html, body {
 @import 'components/telegram/columns';
 @import 'components/telegram/toolbar';
 @import 'components/telegram/active-chat';
+@import 'components/telegram/chat-window';
