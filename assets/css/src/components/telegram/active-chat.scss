@@ -27,13 +27,8 @@
             color: $white;
           }
           .properties {
-            position: absolute;
-            right: 0;
-            top: 0;
             .time {
-              font-size: 13px;
               color: $white;
-              display: block;
             }
             .pin {
               display: block;
@@ -102,7 +97,7 @@
         .properties {
           position: absolute;
           right: 0;
-          top: 0;
+          top: 5px;
           .time {
             font-size: 13px;
             color: $telegram-color-medium-grey;

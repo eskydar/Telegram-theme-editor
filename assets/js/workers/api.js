@@ -13,13 +13,12 @@ define([
             if (xmlHttp.readyState == 4 ) {
                 callback( {statusCode: xmlHttp.status, response: xmlHttp.responseText} );
             }
-
-            xmlHttp.open(method, url, true);
-            xmlHttp.send(data);
-        }
+        };
+        xmlHttp.open(method, url, true);
+        xmlHttp.send(data);
     }
 
-    function post ( url, callback, data ) {
+    function post ( url, data, callback ) {
         request( url, callback, 'POST', data);
     }
 

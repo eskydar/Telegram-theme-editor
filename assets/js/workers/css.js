@@ -30,7 +30,6 @@ define([
         else {
             sheet.addRule(selector, rule, index);
         }
-        console.log(sheet)
     }
 
     // function removeCSSRule ( selector ) {

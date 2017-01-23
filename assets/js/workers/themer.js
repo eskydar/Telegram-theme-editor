@@ -4,14 +4,16 @@ define([
     'helpers/utils',
     'models/Theme',
     'workers/css',
-    'colorpicker'
+    'colorpicker',
+    'templates'
 ], function(
     $,
     _,
     U,
     Theme,
     CSS,
-    colorpicker
+    colorpicker,
+    tpl
 ){
     function initialize () {
     //    This will get removed, is for testing
@@ -44,15 +46,13 @@ define([
     }
 
     function createHTML ( data ) {
-        var templateEl = $('script#sidebar-template').html();
-        var tpl = _.template(templateEl);
-        var htmlToInsert = $(tpl({inputs: data}));
+        var htmlToInsert = $(tpl['sidebar']({inputs: data}));
         $('#sidebar-wrapper').html(htmlToInsert);
         htmlToInsert.find('input').minicolors({
             theme: 'bootstrap',
             change: function ( value ) {
                 var input = $(this);
-                setNewColor(input.attr('data-theme-property'), input.val())
+                setNewColor(input.attr('data-theme-property'), input.val());
             }
         });
     }
