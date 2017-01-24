@@ -12,7 +12,8 @@
 - [x] Style creation on property change
 - [ ] Telegram preview entirely styled
 - [ ] All colors linked to element in preview or inheriting color
-- [ ] BUS Implemented for event support
+- [x] BUS Implemented for event support
+- [x] Overlay worker
 - [ ] Create/download button
 - [ ] Changelog
 - [ ] Style page
