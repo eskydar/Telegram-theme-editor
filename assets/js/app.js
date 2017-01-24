@@ -2,14 +2,19 @@ define([
     'jquery',
     'helpers/utils',
     'models/Theme',
+    'models/Changelog',
     'workers/themer',
     'workers/api',
     'workers/overlay',
-    'core/bus'
+    'core/bus',
+
+    //Not directly used, just included
+    'pages/changelog'
 ], function(
     $,
     U,
     Theme,
+    Changelog,
     themeWorker,
     api,
     overlay,

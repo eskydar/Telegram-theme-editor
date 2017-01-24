@@ -2,7 +2,7 @@
     <% if ( inputs.length ) { %>
     <% _.each(inputs, function(input) { %>
     <div class="form-group">
-        <label style="color:white;" for="input-<%= input.connection %>"><%= input.label %></label>
+        <label for="input-<%= input.connection %>"><%= input.label %></label>
         <input type="text" class="form-control" id="input-<%= input.connection %>" value="<%= input.color %>" data-color-swapper data-theme-property="<%= input.connection %>">
     </div>
     <% }) %>

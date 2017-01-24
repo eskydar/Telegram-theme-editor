@@ -1,0 +1,20 @@
+nav.navbar {
+  background: white;
+  @include border-radius(0);
+  border-bottom: 2px solid $telegram-color-blue;
+  color: $telegram-color-medium-grey-hover;
+  #navbar {
+    ul {
+      li {
+        span {
+          color: #777;
+          position: relative;
+          display: block;
+          padding: 15px 15px;
+          line-height: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

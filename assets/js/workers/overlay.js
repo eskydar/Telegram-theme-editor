@@ -2,17 +2,19 @@ define([
     'jquery',
     'underscore',
     'helpers/utils',
+    'models/Changelog',
     'core/bus',
     'templates'
 ], function(
     $,
     _,
     U,
+    Changelog,
     BUS,
     TPL
 ){
     var targetContainer = $('#overlay-container');
-    var mainOverlayTemplate = TPL['overlay_main'];
+    var mainOverlayTemplate = TPL.overlay_main;
     var overlay = {
         create: function( tplName, data ) {
             if ( !tplName ) return;
@@ -32,7 +34,7 @@ define([
     };
 
     BUS.listenTo('CORE_CREATE_OVERLAY', function(config) {
-        overlay.create('overlay_changelog').toggleShow(true);
+        overlay.create('overlay_changelog', config).toggleShow(true);
     });
 
     BUS.listenTo('CORE_CLOSE_OVERLAY', function() {
@@ -46,6 +48,7 @@ define([
         }
         U.transitionEnd(targetContainer, false, 'opacity', function( container ) {
             targetContainer.removeClass('shown');
+            targetContainer.find('#overlay-content').empty();
         });
     }
 

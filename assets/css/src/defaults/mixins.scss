@@ -43,3 +43,9 @@
     box-shadow: $top $left $blur $spread $color;
   }
 }
+
+@mixin removeBoxShadow {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}

@@ -1,4 +1,18 @@
 section#sidebar-wrapper {
   margin-top: 20px;
   height: 612px;
+  .form-group {
+    label {
+      color: $telegram-color-blue;
+      margin-bottom: 4px;
+    }
+    input {
+      border: 0;
+      @include removeBoxShadow;
+      border-bottom: 2px solid $telegram-color-blue;
+      &:focus {
+        @include removeBoxShadow;
+      }
+    }
+  }
 }

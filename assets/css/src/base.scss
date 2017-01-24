@@ -19,8 +19,6 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -67,9 +65,14 @@ html, body {
   //@include user-select;
 }
 
-@import 'components/header';
+input:focus {
+  outline: none;
+}
+
+@import 'components/nav';
 @import 'components/sidebar';
 @import 'components/overlay';
+@import 'components/changelog';
 //Telegram import
 @import 'components/telegram/telegram';
 @import 'components/telegram/title-bar';

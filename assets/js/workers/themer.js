@@ -29,7 +29,7 @@ define([
     //sidebar-template
     function createElementsHTMLData () {
         var elementsModelKeys = [];
-        var target = 'data-themeConfig-connection';
+        var target = 'data-themeconfig-connection';
         var attr = '[' + target + ']';
         var elements = $('[data-theme-scope]').find(attr);
         elements.each(function(i, element) {
