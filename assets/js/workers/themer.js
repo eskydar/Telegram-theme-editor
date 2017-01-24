@@ -13,7 +13,7 @@ define([
     Theme,
     CSS,
     colorpicker,
-    tpl
+    TPL
 ){
     function initialize () {
     //    This will get removed, is for testing
@@ -46,7 +46,9 @@ define([
     }
 
     function createHTML ( data ) {
-        var htmlToInsert = $(tpl['sidebar']({inputs: data}));
+        var htmlToInsert = $(TPL.sidebar({
+            inputs: data
+        }));
         $('#sidebar-wrapper').html(htmlToInsert);
         htmlToInsert.find('input').minicolors({
             theme: 'bootstrap',

@@ -4,11 +4,18 @@ require.config({
         jquery: '../thirdparty/jquery/dist/jquery.min',
         domReady: '../thirdparty/domReady/domReady',
         colorpicker: '../thirdparty/jquery-minicolors/jquery.minicolors',
-        templates: '../templates/templates'
+        templates: '../templates/templates',
+        minibus: 'core/minibus'
     },
     shim: {
+        'core/bus': {
+            deps:['minibus']
+        },
         colorpicker: ['jquery'],
-        app: ['colorpicker']
+        app: [
+            'colorpicker',
+            'core/bus'
+        ]
     }
 });
 

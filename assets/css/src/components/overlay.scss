@@ -1,0 +1,24 @@
+#overlay-container {
+  position: fixed;
+  height:0;
+  width: 100%;
+  background: white;
+  top:0;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+  overflow: hidden;
+  #overlay-close-button {
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    font-size: 50px;
+  }
+  &.shown {
+    height: 100%;
+  }
+  &.animate {
+    opacity: 1;
+  }
+}
