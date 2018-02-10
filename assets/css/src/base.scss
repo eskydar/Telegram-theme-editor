@@ -61,8 +61,8 @@ html, body {
   font-family: 'Open Sans', sans-serif;
 }
 
-* {
-  //@include user-select;
+#telegram-wrapper * {
+  @include user-select;
 }
 
 input:focus {
@@ -73,6 +73,7 @@ input:focus {
 @import 'components/sidebar';
 @import 'components/overlay';
 @import 'components/changelog';
+@import 'components/options';
 //Telegram import
 @import 'components/telegram/telegram';
 @import 'components/telegram/title-bar';

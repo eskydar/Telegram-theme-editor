@@ -17,10 +17,11 @@ define([
         if ( addToDom ) document.head.appendChild(style);
 
         sheet = style.sheet;
+        window.bassieSheet = sheet;
+
     }
 
     function addCSSRule ( selector, rule ) {
-        //Before we create a new css rule we should clean up our mess that we made before, so lets remove old rules
         removeCSSRule(selector);
         var index = ruleCount();
         if(sheet.insertRule) {
@@ -53,6 +54,7 @@ define([
         var selector = '[data-themeconfig-connection="' + element + '"]';
         if ( pseudo ) selector += ':' + pseudo;
         if ( child ) selector += ' ' + child;
+        //TODO: Check if child > 1 if so create two css rules.
         return selector;
     }
 

@@ -1,3 +1,8 @@
 <script id="overlay-main-template" type="text/x-underscore-template">
-    <%=content%>
+    <span id="overlay-close-button" data-action="CORE_CLOSE_OVERLAY">&times;</span>
+    <div class="container">
+        <div id="overlay-content">
+            <%=content%>
+        </div>
+    </div>
 </script>

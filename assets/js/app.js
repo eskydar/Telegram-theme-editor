@@ -1,4 +1,5 @@
 define([
+    'config',
     'jquery',
     'helpers/utils',
     'models/Theme',
@@ -11,6 +12,7 @@ define([
     //Not directly used, just included
     'pages/changelog'
 ], function(
+    CFG,
     $,
     U,
     Theme,
@@ -25,13 +27,21 @@ define([
         attachEvents();
         window.themeWorker = themeWorker;
         window.Theme = Theme;
-        window.bassieApi = api;
     }
 
     function attachEvents() {
         U.attachDetachEvents(document, 'add', 'click', function(event) {
             U.clickListener(event, function(eventString, value, button) {
                 BUS.trigger(eventString, value, button);
+            });
+        });
+
+        BUS.listenTo('CREATE_THEME', function() {
+        //    TODO::validate the theme name field
+            var generatedThemeConfig = Theme.generateThemeConfig();
+            var themeName = $('#option-theme-name').val();
+            api.post(CFG.apiBaseUrl + 'theme/create/' + themeName, generatedThemeConfig, function(response) {
+                console.log(response)
             });
         });
     }

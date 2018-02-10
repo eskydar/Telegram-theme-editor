@@ -26,7 +26,6 @@ define([
         request( url, callback, 'GET' );
     }
 
-
     return {
         post: post,
         get: get

@@ -15,5 +15,5 @@
 - [x] BUS Implemented for event support
 - [x] Overlay worker
 - [ ] Create/download button
-- [ ] Changelog
-- [ ] Style page
+- [x] Changelog
+- [x] Style page

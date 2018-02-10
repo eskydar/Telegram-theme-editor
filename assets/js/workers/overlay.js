@@ -18,7 +18,7 @@ define([
     var overlay = {
         create: function( tplName, data ) {
             if ( !tplName ) return;
-            data = data || {content:'test'};
+            data = data || {};
 
             var overlayModal = TPL[tplName](data);
             var html = mainOverlayTemplate({content:overlayModal});
@@ -48,12 +48,12 @@ define([
         }
         U.transitionEnd(targetContainer, false, 'opacity', function( container ) {
             targetContainer.removeClass('shown');
-            targetContainer.find('#overlay-content').empty();
+            targetContainer.empty();
         });
     }
 
     function insertToHtml (html) {
-        var contentContainer = targetContainer.find('#overlay-content');
+        var contentContainer = targetContainer;
         contentContainer.empty();
         contentContainer.html(html);
     }

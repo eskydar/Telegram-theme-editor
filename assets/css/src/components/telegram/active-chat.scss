@@ -5,6 +5,7 @@
       width: 100%;
       display: block;
       padding: 8px 10px;
+      background: $white;
       &:hover {
         background: $telegram-color-light-grey;
       }
@@ -45,7 +46,7 @@
       .profile-image {
         height: 46px;
         width: 46px;
-        border-radius: 50%;
+        @include border-radius(50%);
         display: inline-block;
         background: red;
         overflow: hidden;
